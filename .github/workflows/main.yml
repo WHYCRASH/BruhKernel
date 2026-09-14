@@ -37,7 +37,7 @@ on:
         type: boolean
         default: true
       add_zeromount:
-        description: "Add ZeroMount"
+        description: "Add NoMount VFS Redirection"
         type: boolean
         default: true
       add_zram:
@@ -55,18 +55,20 @@ on:
       add_kpm:
         description: "Add KPM (SukiSU/ReSukiSU)"
         type: boolean
-        default: false
+        default: true
       sukisu_commit:
         description: "SukiSU commit (empty = pinned default)"
         type: string
         default: ""
       device_codename:
-        description: "Device profile (generic = no identity spoofing)"
+        description: "Device profile (generic = no identity spoofing; default = peridot for POCO F6/Redmi Turbo 3)"
         type: choice
         options:
+          - peridot
           - generic
           - lake
-        default: "lake"
+          - lake_a15
+        default: "peridot"
 
 jobs:
   build-a12-5-10:

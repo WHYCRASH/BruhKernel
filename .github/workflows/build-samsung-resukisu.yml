@@ -16,7 +16,7 @@ on:
         type: boolean
         default: true
       add_zeromount:
-        description: "Add ZeroMount"
+        description: "Add NoMount VFS Redirection"
         type: boolean
         default: true
       add_kpm:
@@ -339,7 +339,7 @@ jobs:
         PATCH="$GITHUB_WORKSPACE/$VERSION_DIR/ReSukiSU/patches/70_ksu_safety-resukisu-${KERNEL_VER}.patch"
         [ -s "$PATCH" ] && patch -p1 --no-backup-if-mismatch < "$PATCH" || echo "No 70_ patch needed"
 
-    - name: Apply ZeroMount Patch
+    - name: Apply NoMount Patch (zeromount compatibility layer)
       if: inputs.add_zeromount && inputs.add_susfs
       working-directory: ${{ env.KERNEL_COMMON }}
       run: |
@@ -608,7 +608,7 @@ jobs:
           echo "| **Source** | ${SOURCE_REPO} @ ${SOURCE_BRANCH} |"
           echo "| **LTO** | ${LTO_MODE} |"
           echo "| **Enhanced SUSFS** | $(S "$ADD_SUSFS") |"
-          echo "| **ZeroMount** | $(S "$ADD_ZEROMOUNT") |"
+          echo "| **NoMount** | $(S "$ADD_ZEROMOUNT") |"
           echo "| **ZRAM (LZ4K/LZ4KD)** | $(S "$ADD_ZRAM") |"
           echo "| **KPM** | $(S "$ADD_KPM") |"
           echo "| **WiFi Fix** | $(S "$WIFI_FIX") |"

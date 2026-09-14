@@ -19,7 +19,7 @@ on:
         type: boolean
         default: true
       add_zeromount:
-        description: "Add ZeroMount"
+        description: "Add NoMount VFS Redirection"
         type: boolean
         default: true
       add_zram:

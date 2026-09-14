@@ -23,7 +23,7 @@ on:
         type: boolean
         default: true
       add_zeromount:
-        description: "Add ZeroMount"
+        description: "Add NoMount VFS Redirection"
         type: boolean
         default: true
       add_zram:
@@ -47,12 +47,14 @@ on:
         type: string
         default: ""
       device_codename:
-        description: "Device profile (generic = no identity spoofing)"
+        description: "Device profile (generic = no identity spoofing; peridot = POCO F6/Redmi Turbo 3)"
         type: choice
         options:
+          - peridot
           - generic
           - lake
-        default: "lake"
+          - lake_a15
+        default: "peridot"
   workflow_call:
     inputs:
       ksu_variant:

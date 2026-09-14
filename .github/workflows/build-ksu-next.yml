@@ -259,7 +259,7 @@ jobs:
           echo "[OK] NoMount source integrated."
         fi
 
-    - name: Apply ZeroMount Patch
+    - name: Apply NoMount Patch (zeromount compatibility layer)
       if: inputs.add_zeromount && inputs.add_susfs
       working-directory: ${{ env.KERNEL_ROOT }}/common
       run: |
@@ -562,7 +562,7 @@ jobs:
           echo "| **Android** | ${ANDROID_VER} |"
           echo "| **OS Patch Level** | ${OS_PATCH} |"
           echo "| **Enhanced SUSFS** | $(S "$ADD_SUSFS") |"
-          echo "| **ZeroMount** | $(S "$ADD_ZEROMOUNT") |"
+          echo "| **NoMount** | $(S "$ADD_ZEROMOUNT") |"
           echo "| **ZRAM (LZ4K/LZ4KD)** | $(S "$ADD_ZRAM") |"
           echo "| **LZ4 v1.10.0** | $(S "$ADD_ZRAM") |"
           echo "| **Overlayfs Support** | $(S "$ADD_OVERLAYFS") |"

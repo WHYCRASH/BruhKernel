@@ -11,6 +11,48 @@
 
 ---
 
+## ⚠️ Device Note: Default Kernel String Spoofing
+
+> **The prebuilt kernel strings in this repository are configured for `peridot` — POCO F6 / Redmi Turbo 3 (Android 14, Kernel 6.1).**
+
+This means the kernel version banner (`uname -r`), build timestamp, and compiler info embedded in the kernel image are spoofed to match the stock OEM values for that specific device — helping avoid detection-based mismatches on banking apps and integrity checks.
+
+**If you are using a different GKI-compatible device**, you will want to match your own device's stock kernel strings. Here is how to do it:
+
+### Custom Device Kernel Strings — Step by Step
+
+1. **Extract your stock `boot.img`:** Download your device's OTA or stock firmware. Use `payload-dumper-go` or `payload_dumper.py` to extract `boot.img` from `payload.bin`.
+2. **Read the kernel version string:**
+   ```bash
+   strings boot.img | grep "Linux version"
+   ```
+   Example output:
+   ```
+   Linux version 6.1.57-android14-11-gabcdef123456-ab12345678 (build-user@build-host) (Android clang version 17.0.2, ...) #1 SMP PREEMPT ...
+   ```
+3. **Edit `device-profiles.json`:** Add your device profile under `devices`:
+   ```json
+   "mydevice": {
+     "name": "Your Device Name",
+     "codename": "mydevice",
+     "android_version": "android14",
+     "kernel_version": "6.1",
+     "sub_level": "57",
+     "os_patch_level": "2024-01",
+     "stock_kernel": {
+       "release": "-android14-11-gabcdef123456-ab12345678",
+       "version_string": "#1 SMP PREEMPT Mon Jan 1 12:00:00 UTC 2024",
+       "build_user": "build-user",
+       "build_host": "build-host",
+       "compiler_info": "Android clang version 17.0.2"
+     }
+   }
+   ```
+4. **Select your codename in the workflow dispatch:** When triggering a build via GitHub Actions, choose `device_codename: mydevice` from the dropdown (after adding it to the options list in the relevant `kernel-*.yml` file).
+5. **Alternatively use BootKernelChanger:** Flash the generic built kernel, then use [BootKernelChanger](https://github.com/Dayto0/BootKernelChanger) to inject the compiled kernel into your stock boot image. This preserves the stock OEM metadata automatically without editing the profiles.
+
+---
+
 ## 📖 Overview
 
 **BruhKernel** is an automated GKI (Generic Kernel Image) build pipeline designed for modern Android 12 – 16 devices running common GKI kernels (with profiles for Android 14 Kernel 6.1).
@@ -26,7 +68,7 @@ Earlier iterations of custom GKI builders incorporated **ZeroMount** (`60_zeromo
 **BruhKernel transitions to native NoMount (`CONFIG_NOMOUNT=y`):**
 * **Zero Mount Pollution:** Operates purely in RAM by intercepting directory operations and path resolution within kernel caches. It generates **0 entries** in `/proc/mounts` and `/proc/self/mountinfo`.
 * **Zero `/dev` Nodes:** All communication between userspace and the kernel is handled via the Linux Kernel Keyring subsystem (`SYS_add_key`), eliminating detectable device nodes.
-* **Lean & Conflict-Free:** By setting `add_zeromount: false`, we eliminate redundant overlayfs hooks and keep the kernel lean, stable, and conflict-free.
+* **Lean & Conflict-Free:** With NoMount integrated natively, we eliminate redundant overlayfs hooks and keep the kernel lean, stable, and conflict-free.
 
 ---
 
@@ -47,11 +89,11 @@ Earlier iterations of custom GKI builders incorporated **ZeroMount** (`60_zeromo
 Ensures kernel version banners, build timestamps, and compiler identifiers seamlessly match configured OEM target profiles in `device-profiles.json` to prevent runtime environment mismatches.
 
 ### 4. Performance & Networking
-* **TCP BBRv3 / BBR:** Google’s Bottleneck Bandwidth and RTT congestion control algorithm for low-latency networking.
+* **TCP BBRv3 / BBR:** Google's Bottleneck Bandwidth and RTT congestion control algorithm for low-latency networking.
 * **ZRAM with LZ4KD Compression:** Accelerated page compression and decompression algorithms for smoother memory management.
 * **`CONFIG_TMPFS_XATTR=y` & `CONFIG_TMPFS_POSIX_ACL=y`:** Extended filesystem attribute support for modern Android containers.
 * **Baseband Guard (BBG):** Hardened radio interface protection.
-* **`CONFIG_KPM=y`:** In-kernel Kernel Patch Module runtime loader.
+* **`CONFIG_KPM=y`:** In-kernel Kernel Patch Module runtime loader (SukiSU / ReSukiSU variants).
 
 ---
 
