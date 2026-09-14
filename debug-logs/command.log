@@ -1,0 +1,247 @@
+Computing main repo mapping: 
+Loading: 
+Loading: 1 packages loaded
+Loading: 1 packages loaded
+    currently loading: common
+Analyzing: target //common:kernel_aarch64_dist (2 packages loaded)
+Analyzing: target //common:kernel_aarch64_dist (2 packages loaded, 0 targets configured)
+Analyzing: target //common:kernel_aarch64_dist (2 packages loaded, 0 targets configured)
+[0 / 1] checking cached actions
+Analyzing: target //common:kernel_aarch64_dist (64 packages loaded, 8566 targets configured)
+[1 / 1] checking cached actions
+Analyzing: target //common:kernel_aarch64_dist (70 packages loaded, 30784 targets configured)
+[1 / 1] checking cached actions
+Analyzing: target //common:kernel_aarch64_dist (72 packages loaded, 98286 targets configured)
+[1 / 1] checking cached actions
+INFO: Analyzed target //common:kernel_aarch64_dist (72 packages loaded, 98409 targets configured).
+[1 / 2] [Prepa] Writing script common/kernel_aarch64_dist
+[95 / 495] [Prepa] action 'SolibSymlink _solib_x86_64/_U_S_Sprebuilts_Skernel-build-tools_Clinux_Ux86_Uimported_Ulibs_Ulinux-x86_Slib64_Slibcrypto-host.so___Uprebuilts_Skernel-build-tools_Slinux-x86_Slib64/libcrypto-host.so'
+[219 / 754] PackageZip common/test_mappings.zip; 0s processwrapper-sandbox ... (2 actions, 1 running)
+[246 / 754] Building Python zip: //build/kernel:init_ddk; 0s processwrapper-sandbox
+[330 / 754] Generating BUILD.bazel for all_headers_aarch64 @@//common:kernel_aarch64_ddk_headers_archive; 0s processwrapper-sandbox
+[332 / 754] Compiling build/kernel/kleaf/impl/arg_wrapper.cpp [for tool]; 0s processwrapper-sandbox ... (2 actions running)
+[334 / 754] Compiling build/kernel/kleaf/impl/arg_wrapper.cpp [for tool]; 1s processwrapper-sandbox ... (4 actions running)
+[346 / 754] Compiling common/tools/testing/selftests/vDSO/vdso_test_gettimeofday.c; 0s processwrapper-sandbox ... (5 actions, 4 running)
+[355 / 754] Linking common/kselftest_breakpoints_breakpoint_test; 0s processwrapper-sandbox ... (5 actions, 3 running)
+[367 / 754] Compiling src/zopfli/lz77.c [for tool]; 0s processwrapper-sandbox ... (3 actions, 2 running)
+[377 / 754] Compiling src/zopfli/katajainen.c [for tool]; 0s processwrapper-sandbox ... (5 actions, 3 running)
+[387 / 754] Compiling compress.c [for tool]; 0s processwrapper-sandbox ... (5 actions, 4 running)
+[402 / 754] Compiling src/zopfli/deflate.c [for tool]; 0s processwrapper-sandbox ... (5 actions, 4 running)
+[407 / 754] Compiling common/tools/testing/selftests/futex/functional/futex_wait_wouldblock.c; 0s processwrapper-sandbox ... (5 actions, 4 running)
+[409 / 754] Compiling common/tools/testing/selftests/futex/functional/futex_requeue_pi.c; 2s processwrapper-sandbox ... (5 actions, 4 running)
+[417 / 754] Compiling src/zopfli/blocksplitter.c [for tool]; 0s processwrapper-sandbox ... (5 actions, 4 running)
+[429 / 754] Compiling zutil.c [for tool]; 0s processwrapper-sandbox ... (4 actions, 3 running)
+[440 / 754] Compiling common/tools/testing/selftests/timers/set-timer-lat.c; 0s processwrapper-sandbox ... (5 actions, 4 running)
+[444 / 754] Compiling common/tools/testing/selftests/futex/functional/futex_wait.c; 1s processwrapper-sandbox ... (4 actions running)
+[454 / 754] Compiling common/tools/testing/selftests/futex/functional/futex_wait_private_mapped_file.c; 0s processwrapper-sandbox ... (4 actions, 3 running)
+[464 / 754] Compiling inflate.c [for tool]; 0s processwrapper-sandbox ... (5 actions, 4 running)
+[479 / 754] Compiling common/tools/testing/selftests/timers/nanosleep.c; 0s processwrapper-sandbox ... (4 actions running)
+[491 / 754] Compiling common/tools/testing/selftests/timers/leap-a-day.c; 0s processwrapper-sandbox ... (5 actions, 4 running)
+[497 / 754] Compiling common/tools/testing/selftests/timers/inconsistency-check.c; 0s processwrapper-sandbox ... (4 actions, 3 running)
+[510 / 754] Creating abi_symbollist and report @@//common:kernel_aarch64_kmi_symbol_list; 0s processwrapper-sandbox ... (5 actions, 4 running)
+[525 / 754] Creating abi_symbollist.raw @@//common:kernel_aarch64_raw_kmi_symbol_list; 1s processwrapper-sandbox ... (5 actions, 4 running)
+[548 / 754] Determining scmversion @@//common:kernel_aarch64_config; 0s processwrapper-sandbox ... (3 actions, 2 running)
+[598 / 754] Creating kernel config (lto=thin;sukisu_gki.fragment;trim) @@//common:kernel_aarch64_config; 0s local ... (4 actions, 3 running)
+[631 / 754] Creating kernel config (lto=thin;sukisu_gki.fragment;trim) @@//common:kernel_aarch64_config; 1s local ... (5 actions, 4 running)
+[634 / 754] Creating kernel config (lto=thin;sukisu_gki.fragment;trim) @@//common:kernel_aarch64_config; 2s local ... (5 actions, 4 running)
+[639 / 754] Creating kernel config (lto=thin;sukisu_gki.fragment;trim) @@//common:kernel_aarch64_config; 3s local ... (5 actions, 3 running)
+[640 / 754] Creating kernel config (lto=thin;sukisu_gki.fragment;trim) @@//common:kernel_aarch64_config; 4s local ... (4 actions running)
+[644 / 754] Creating kernel config (lto=thin;sukisu_gki.fragment;trim) @@//common:kernel_aarch64_config; 5s local ... (4 actions running)
+[647 / 754] Creating kernel config (lto=thin;sukisu_gki.fragment;trim) @@//common:kernel_aarch64_config; 7s local ... (4 actions, 3 running)
+[649 / 754] Creating kernel config (lto=thin;sukisu_gki.fragment;trim) @@//common:kernel_aarch64_config; 8s local ... (4 actions running)
+[651 / 754] Creating kernel config (lto=thin;sukisu_gki.fragment;trim) @@//common:kernel_aarch64_config; 9s local ... (5 actions, 3 running)
+[657 / 754] Creating kernel config (lto=thin;sukisu_gki.fragment;trim) @@//common:kernel_aarch64_config; 10s local ... (4 actions, 3 running)
+[670 / 754] Creating kernel config (lto=thin;sukisu_gki.fragment;trim) @@//common:kernel_aarch64_config; 11s local ... (4 actions, 3 running)
+[711 / 754] Creating kernel config (lto=thin;sukisu_gki.fragment;trim) @@//common:kernel_aarch64_config; 12s local ... (4 actions running)
+[737 / 754] Creating kernel config (lto=thin;sukisu_gki.fragment;trim) @@//common:kernel_aarch64_config; 13s local ... (2 actions running)
+ERROR: /home/runner/work/BruhKernel/BruhKernel/android15-6.6-50/common/BUILD.bazel:132:22: Creating kernel config (lto=thin;sukisu_gki.fragment;trim) @@//common:kernel_aarch64_config failed: (Exit 1): bash failed: error executing KernelConfig command (from target //common:kernel_aarch64_config) 
+  (cd /home/runner/work/BruhKernel/BruhKernel/android15-6.6-50/out/bazel/output_user_root/ae6e76fbe3dcecef4cc4d96b4f00d03f/execroot/_main && \
+  exec env - \
+  /bin/bash -c '
+        
+         # error on failures
+           set -e
+           set -o pipefail
+    
+                export PATH=$(bazel-out/k8-opt-exec-ST-13d3ddad9198/bin/build/kernel/hermetic-tools/readlink -m bazel-out/k8-opt-exec-ST-13d3ddad9198/bin/build/kernel/hermetic-tools)
+                # Ensure _setup_env.sh keeps the original items in PATH
+                export KLEAF_INTERNAL_BUILDTOOLS_PREBUILT_BIN=bazel-out/k8-opt-exec-ST-13d3ddad9198/bin/build/kernel/hermetic-tools
+
+        source build/kernel/build_utils.sh
+        # source the build environment
+        source bazel-out/k8-fastbuild/bin/common/kernel_aarch64_env.sh
+    
+          
+            KLEAF_CONFIG_TAGS_TMP=$(mktemp kleaf_config_tags.json.XXXXXX)
+            # cache_dir_config_tags.py requires --dest to not exist, otherwise it compares
+            # and fails.
+            rm -f "${KLEAF_CONFIG_TAGS_TMP}"
+
+            # Add label of this target.
+            bazel-out/k8-opt-exec-ST-13d3ddad9198/bin/build/kernel/kleaf/impl/cache_dir_config_tags \
+                --base bazel-out/k8-fastbuild/bin/common/kernel_aarch64_env/common_config_tags.json \
+                --target '\''@@//common:kernel_aarch64_config'\'' \
+                --dest "${KLEAF_CONFIG_TAGS_TMP}"
+
+            export OUT_DIR_SUFFIX=$(cat ${KLEAF_CONFIG_TAGS_TMP} | sha1sum -b | cut -c-8)
+
+            export COMMON_OUT_DIR=/home/runner/work/BruhKernel/BruhKernel/android15-6.6-50/out/cache/${OUT_DIR_SUFFIX}
+            export OUT_DIR=${COMMON_OUT_DIR}/${KERNEL_DIR}
+            mkdir -p "${OUT_DIR}"
+
+            # Reconcile differences between expected file and target file, if any,
+            # to prevent hash collision.
+            bazel-out/k8-opt-exec-ST-13d3ddad9198/bin/build/kernel/kleaf/impl/cache_dir_config_tags \
+                --base "${KLEAF_CONFIG_TAGS_TMP}" \
+                --dest "${COMMON_OUT_DIR}/kleaf_config_tags.json"
+
+            rm -f "${KLEAF_CONFIG_TAGS_TMP}"
+            unset KLEAF_CONFIG_TAGS_TMP
+
+            
+        
+        # Pre-defconfig commands
+          eval ${PRE_DEFCONFIG_CMDS}
+        # Actual defconfig
+          make -C ${KERNEL_DIR} ${TOOL_ARGS} O=${OUT_DIR} ${DEFCONFIG}
+        # Post-defconfig commands
+          eval ${POST_DEFCONFIG_CMDS}
+        # Re-config
+          
+        (
+            need_olddefconfig=
+            configs_to_apply=$(echo --enable LTO_CLANG --disable LTO_NONE --enable LTO_CLANG_THIN --disable LTO_CLANG_FULL --enable THINLTO --enable TRIM_UNUSED_KSYMS --set-str UNUSED_KSYMS_WHITELIST abi_symbollist.raw)
+            # There could be reconfigurations based on configs which can lead to
+            #  an empty `configs_to_apply` even when `configs` is not empty,
+            #  for that reason it is better to check it is not empty before using it.
+            if [ -n "${configs_to_apply}" ]; then
+                ${KERNEL_DIR}/scripts/config --file ${OUT_DIR}/.config ${configs_to_apply}
+                need_olddefconfig=1
+            fi
+
+            
+        (
+            # Remove any trailing comments
+            sanitized_fragments=
+            for fragment in common/arch/arm64/configs/sukisu_gki.fragment; do
+                new_fragment=${OUT_DIR}/defconfig_fragments/${fragment}
+                mkdir -p $(dirname ${new_fragment})
+                # Use Python, not sed, to support non-greedy regex matching
+                # I avoided perl because it is not hermetic yet.
+                python3 -c '\''import re, sys; [print(re.sub(r"(\S+=[^#]*?)\s*#.*$", r"\1", l.rstrip("\n"))) for l in open(sys.argv[1])]'\'' ${fragment} > ${new_fragment}
+                sanitized_fragments="${sanitized_fragments} ${new_fragment}"
+            done
+
+            # Merge target defconfig into .config from kernel_build
+            KCONFIG_CONFIG=${OUT_DIR}/.config.tmp \
+                ${KERNEL_DIR}/scripts/kconfig/merge_config.sh \
+                    -m -r \
+                    ${OUT_DIR}/.config \
+                    ${sanitized_fragments} > /dev/null
+            mv ${OUT_DIR}/.config.tmp ${OUT_DIR}/.config
+        )
+    
+            need_olddefconfig=1
+        
+
+            if [[ -n "${need_olddefconfig}" ]]; then
+                make -C ${KERNEL_DIR} ${TOOL_ARGS} O=${OUT_DIR} olddefconfig
+            fi
+
+            
+        (
+            for defconfig_path in common/arch/arm64/configs/sukisu_gki.fragment; do
+                config_set='\''s/^(CONFIG_\w*)=.*/\1/p'\''
+                config_not_set='\''s/^# (CONFIG_\w*) is not set$/\1/p'\''
+                configs=$(sed -n -E -e "${config_set}" -e "${config_not_set}" ${defconfig_path})
+                error_msg=""
+                for config in ${configs}; do
+                    defconfig_line=$(grep -w -e "${config}" ${defconfig_path})
+                    defconfig_value=$(echo "${defconfig_line}" | sed -E -e '\''s/\s*# nocheck.*$//g'\'')
+                    nocheck_reason=$(echo ${defconfig_line} | sed -n -E -e '\''s/^.*# nocheck(:\s*)?(.*)$/\2/p'\'')
+                    actual_value=$(grep -w -e "${config}" ${OUT_DIR}/.config || true)
+
+                    config_not_set_regexp='\''^# CONFIG_[A-Z_]+ is not set$'\''
+                    if [[ "${defconfig_value}" =~ ${config_not_set_regexp} ]]; then
+                        defconfig_value=""
+                    fi
+                    if [[ "${actual_value}" =~ ${config_not_set_regexp} ]]; then
+                        actual_value=""
+                    fi
+
+                    if [[ "${defconfig_value}" != "${actual_value}" ]] ; then
+                        my_msg="${config}: actual '\''${actual_value}'\'', expected '\''${defconfig_value}'\'' from ${defconfig_path}."
+                        if [[ "${defconfig_line}" == *#\ nocheck* ]]; then
+                            warn_msg="${warn_msg}
+    ${my_msg}
+        (ignore reason: ${nocheck_reason})"
+                        else
+                            error_msg="${error_msg}
+    ${my_msg}"
+                            found_unexpected=1
+                        fi
+                    fi
+                done
+                if [[ -n "${warn_msg}" ]]; then
+                    echo "WARNING: @@//common:kernel_aarch64_config: ${warn_msg}" >&2
+                fi
+                if [[ -n "${error_msg}" ]]; then
+                    echo "ERROR: @@//common:kernel_aarch64_config: ${error_msg}
+    Are they declared in Kconfig?" >&2
+                    exit 1
+                fi
+            done
+        )
+    
+        )
+    
+        # HACK: run syncconfig to avoid re-triggerring kernel_build
+          make -C ${KERNEL_DIR} ${TOOL_ARGS} O=${OUT_DIR} syncconfig
+        # Grab outputs
+          rsync -aL ${OUT_DIR}/.config bazel-out/k8-fastbuild/bin/common/kernel_aarch64_config/out_dir/.config
+          rsync -aL ${OUT_DIR}/include/ bazel-out/k8-fastbuild/bin/common/kernel_aarch64_config/out_dir/include/
+          rsync -aL bazel-out/k8-fastbuild/bin/common/kernel_aarch64_config/localversion bazel-out/k8-fastbuild/bin/common/kernel_aarch64_config/out_dir/localversion
+          
+            rsync -aL bazel-out/k8-fastbuild/bin/common/kernel_aarch64_raw_kmi_symbol_list/abi_symbollist.raw bazel-out/k8-fastbuild/bin/common/kernel_aarch64_config/out_dir/abi_symbollist.raw
+        
+
+        # Ensure reproducibility. The value of the real $ROOT_DIR is replaced in the setup script.
+          sed -i'\'''\'' -e '\''s:'\''"${ROOT_DIR}"'\'':${ROOT_DIR}:g'\'' bazel-out/k8-fastbuild/bin/common/kernel_aarch64_config/out_dir/include/config/auto.conf.cmd
+
+        # HACK: Ensure we always SYNC auto.conf. This ensures binaries like fixdep are always
+        # re-built. See b/263415662
+          echo "include/config/auto.conf: FORCE" >> bazel-out/k8-fastbuild/bin/common/kernel_aarch64_config/out_dir/include/config/auto.conf.cmd
+
+          
+            ln -sfT ${OUT_DIR_SUFFIX} /home/runner/work/BruhKernel/BruhKernel/android15-6.6-50/out/cache/last_config
+            
+        
+        ')
+# Configuration: c3c9c98b41ccd803a40056591dc236952b20b1f111deed72fc679f5e1119f8d6
+# Execution platform: @@local_config_platform//:host
+ERROR: @@//common:kernel_aarch64_config: 
+    CONFIG_TCP_CONG_BBR: actual '', expected 'CONFIG_TCP_CONG_BBR=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_TCP_CONG_WESTWOOD: actual '', expected 'CONFIG_TCP_CONG_WESTWOOD=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_TCP_CONG_HTCP: actual '', expected 'CONFIG_TCP_CONG_HTCP=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_IP_SET_MAX: actual '', expected 'CONFIG_IP_SET_MAX=65534' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_IP_SET_BITMAP_IP: actual '', expected 'CONFIG_IP_SET_BITMAP_IP=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_IP_SET_BITMAP_IPMAC: actual '', expected 'CONFIG_IP_SET_BITMAP_IPMAC=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_IP_SET_BITMAP_PORT: actual '', expected 'CONFIG_IP_SET_BITMAP_PORT=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_IP_SET_HASH_IP: actual '', expected 'CONFIG_IP_SET_HASH_IP=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_IP_SET_HASH_IPMARK: actual '', expected 'CONFIG_IP_SET_HASH_IPMARK=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_IP_SET_HASH_IPPORT: actual '', expected 'CONFIG_IP_SET_HASH_IPPORT=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_IP_SET_HASH_IPPORTIP: actual '', expected 'CONFIG_IP_SET_HASH_IPPORTIP=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_IP_SET_HASH_IPPORTNET: actual '', expected 'CONFIG_IP_SET_HASH_IPPORTNET=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_IP_SET_HASH_IPMAC: actual '', expected 'CONFIG_IP_SET_HASH_IPMAC=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_IP_SET_HASH_MAC: actual '', expected 'CONFIG_IP_SET_HASH_MAC=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_IP_SET_HASH_NETPORTNET: actual '', expected 'CONFIG_IP_SET_HASH_NETPORTNET=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_IP_SET_HASH_NET: actual '', expected 'CONFIG_IP_SET_HASH_NET=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_IP_SET_HASH_NETNET: actual '', expected 'CONFIG_IP_SET_HASH_NETNET=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_IP_SET_HASH_NETPORT: actual '', expected 'CONFIG_IP_SET_HASH_NETPORT=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_IP_SET_HASH_NETIFACE: actual '', expected 'CONFIG_IP_SET_HASH_NETIFACE=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    CONFIG_IP_SET_LIST_SET: actual '', expected 'CONFIG_IP_SET_LIST_SET=y' from common/arch/arm64/configs/sukisu_gki.fragment.
+    Are they declared in Kconfig?
+Target //common:kernel_aarch64_dist failed to build
+INFO: Elapsed time: 62.374s, Critical Path: 22.44s
+INFO: 739 processes: 436 internal, 303 processwrapper-sandbox.
+ERROR: Build did NOT complete successfully
